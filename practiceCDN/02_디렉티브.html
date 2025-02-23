@@ -121,6 +121,32 @@
             <button @click.right.prevent="(e)=>{console.log('우클릭')}">기본 팝업이벤트 막기</button>
             <button @click.meta.prevent="(e)=>{console.log('커맨드클릭 막기')}">커맨드클릭막기</button>
         </p>
+        <p>
+            v-model
+        </p>
+        <p>
+            데이터와 연동하때 사용하는 디렉티브<br>
+            input태그의 입력값 데이터를 연결할떄 사용
+        </p>
+        <p>
+            데이터와 연동할 때 사용하는 디렉티브<br>
+            인풋태그의 입력값 데이터를 연결할 때 사용
+            vue 인스턴스에 model(data)에 설정한 변수인 inputdata에 input태그의 입력값을 연동하여<br>
+        <!--{{ }}--> 보간 법으로, 데이터를 화면에 출력한다.
+        </p>
+
+        <input type="text" v-model="inputdata">
+        <h4>{{ inputdata }}</h4>
+
+        <p></p>
+        <input type="checkbox" name="basicCheck" v-model="basicCheck">
+        <p>basicCheck: {{ basicCheck}}</p>
+
+
+        <p>value값을 선언한 checkbox</p>
+        <input type="checkbox" name="basicCheck2" v-model="basicCheck2" value="체크값">값 설정
+        <h4>basicCheck2값 : {{ basicCheck2 }}</h4>
+
     </div>
     <script>
 
@@ -142,7 +168,9 @@
             ,myinputRadio:{"type":"radio","id":"gender","name":"gender","class":"myinput"}
             ,mystyle:"mystyle"
             ,myfont:"myfont"
-            
+            ,inputdata:""     
+            ,basicCheck:''
+            ,basicCheck2:''       
 
         }
 
