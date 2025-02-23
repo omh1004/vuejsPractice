@@ -118,6 +118,8 @@
 
         <p>
             우클릭, 커맨트 + 클릭 이벤트 막기 
+            <button @click.right.prevent="(e)=>{console.log('우클릭')}">기본 팝업이벤트 막기</button>
+            <button @click.meta.prevent="(e)=>{console.log('커맨드클릭 막기')}">커맨드클릭막기</button>
         </p>
     </div>
     <script>
